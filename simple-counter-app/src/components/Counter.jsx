@@ -6,11 +6,15 @@ function Counter(){
     function CountUp(){
         setCount(count + 1)
     }
+    function CountDown(){
+        setCount(count - 1)
+    }
 
     return(
     <div>
         <h3>{count}</h3>
-        <button onClick={CountUp}>Click Me!</button>
+        <button onClick={CountUp}>Click Me +!</button>
+        <button onClick={CountDown}>Click Me -!</button>
     </div>
     )
 }
