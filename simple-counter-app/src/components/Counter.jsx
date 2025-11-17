@@ -4,11 +4,13 @@ function Counter(){
     const [count, setCount] = useState(0);
 
     function CountUp(){
-        setCount(count + 1)
+        setCount(prevCount => prevCount + 1);
     }
     function CountDown(){
-        setCount(count - 1)
+        setCount(prevCount => (prevCount > 0 ? prevCount - 1 : 0));
     }
+
+    // The logic to prevent negative numbers is now inside CountDown
 
     return(
     <div>
